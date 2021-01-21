@@ -1,0 +1,2 @@
+Possible precedence issue with control flow operator at /pkg/biology/Perl/Perl_v5.28.0/lib/perl5/site_perl/5.28.0/Bio/DB/IndexedBase.pm line 845.
+2021-01-21 15:49:51 - INFO: BAM-edited cache detected, enabling --use_transcript_ref; use --use_given_ref to override this
