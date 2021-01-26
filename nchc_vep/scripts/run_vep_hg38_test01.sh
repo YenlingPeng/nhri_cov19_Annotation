@@ -33,6 +33,14 @@ module load biology/Perl/default
 mkdir -p $OUTPUT_VCF_PATH/${SAMPLE_ID}_${HG}
 cd $OUTPUT_VCF_PATH/${SAMPLE_ID}_${HG}
 
+# logfile
+TODAY=`date +%Y%m%d%H%M`
+logfile=./${TODAY}_run.log
+exec 3<&1 4<&2
+exec >$logfile 2>&1
+set -euo pipefail
+set -x
+
 # USAGE OPTIONS
 $VEP_PATH/vep --cache --offline \
         --cache_version 99 \
@@ -68,5 +76,7 @@ $VEP_PATH/vep --cache --offline \
         --check_existing \
         --buffer_size 5000 \
         --fork 10 \
-        --force_overwrite > vep.log 2>&1
+        --force_overwrite 
 
+echo "=================================================================="
+echo "VEP finished normally"
