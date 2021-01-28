@@ -1,0 +1,8 @@
++ /root/ensembl-vep//vep --cache --offline --cache_version 102 --merged --assembly GRCh38 --dir_cache /data/vep_cache --port 3337 -i /root/inputs/GIAB_NA12878_HG001_hg38_alt_dragen_v3.4.12.hard-filtered.vcf.gz --vcf -o test01_hg38_output.vcf --check_existing --fasta /data/vep_cache/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz --fork 4 --buffer_size 50000
+2021-01-28 11:55:38 - INFO: BAM-edited cache detected, enabling --use_transcript_ref; use --use_given_ref to override this
++ /root/ensembl-vep//vep --cache --offline --cache_version 102 --merged --assembly GRCh38 --port 3337 --dir_cache /data/vep_cache -i /root/inputs/GIAB_NA12878_HG001_hg38_alt_dragen_v3.4.12.hard-filtered.vcf.gz -o test01_hg38_output.txt --tab --pick --everything --check_existing --fasta /data/vep_cache/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz --fork 10 --force_overwrite --buffer_size 50000
+2021-01-28 11:55:46 - INFO: BAM-edited cache detected, enabling --use_transcript_ref; use --use_given_ref to override this
++ echo ==================================================================
+==================================================================
++ echo VEP finished normally
+VEP finished normally
